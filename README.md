@@ -1,4 +1,4 @@
-# Pong
+# Pong Game
 Pong Game simples para 2 JOGADORES
 
 #  Executando
