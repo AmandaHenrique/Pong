@@ -1,6 +1,6 @@
 # Pong Game
 Pong Game simples para 2 JOGADORES
-Baixe a pasta PongGame
+<p> Baixe a pasta PongGame
 
 #  Executando
 Rode o arquivo PONG.py
