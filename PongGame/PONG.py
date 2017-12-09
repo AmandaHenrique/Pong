@@ -13,7 +13,7 @@ from pygame.locals import *
 from pygame.constants import *
 from time import sleep
 from pygame.time import Clock
-from pygame.mixer import Sound
+import pygame.mixer
 
 largura = 700
 altura = 600
@@ -53,7 +53,8 @@ pontuaçao_vermelho = 0
 verde = 159,205,179
 vermelho = 230,102,99
 
-somBolinha = pygame.mixer.Sound("SomBolinha.wav")
+somBolinha = pygame.mixer.Sound("SomBolinha.ogg")
+
 
 
 jogando = False
@@ -146,16 +147,24 @@ while jogando == True:
 
 
     if bolinha.colliderect(retBaixo):
+        somBolinha.play()
         velocidade_bolinhaY = velocidade_bolinhaY * -1
+
     if bolinha.colliderect(retCima):
+        somBolinha.play()
         velocidade_bolinhaY = velocidade_bolinhaY * -1
 
 
     if bolinha.colliderect(player_verde):
+        somBolinha.play()
         velocidade_bolinhaX = velocidade_bolinhaX * -1
 
     if bolinha.colliderect(player_vermelho):
+        somBolinha.play()
         velocidade_bolinhaX = velocidade_bolinhaX * -1
+
+
+
 
 
     if player_verde.colliderect(retCima):
